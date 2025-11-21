@@ -31,27 +31,3 @@ controlls.forEach((e) =>{
 show(imageIndex)
 
 
-let projects = document.querySelector('.projects')
-
-let projArr = []
-
-class project{
-    constructor(name , image ){
-        this.name = name
-        this.image = image
-}
-     tohtml(){
-        return ` <div class="project">
-                    <h2 class="project__name">${this.name}</h2>
-                    <img src="${this.image}" class="project__img">
-                 </div>`
-    }
-}
-projArr.push(new project('MYRZHAKIP DULATOVA' , '/images/md.jpeg'))
-projArr.push(new project('TANDAU' , '/images/tandau.jpeg'))
-projArr.push(new project('ZHANA ALTAY' , '/images/zhana-altay.jpeg'))
-projArr.push(new project('ALTYN' , '/images/altyn.jpeg'))
-
-for(i = 0 ; i < projArr.length ; i++ ){
-    projects.innerHTML += projArr[i].tohtml()
-}
